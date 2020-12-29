@@ -1,0 +1,99 @@
+// Main Rules
+.input_custum {
+  padding: 5px;
+  width: 100%;
+}
+
+body {
+  background-color: #f7f9fb;
+  height: 3000px;
+
+  .slide {
+    border: 1px solid red;
+    padding: 10px;
+    .title {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-left: 6px;
+    }
+    .link {
+      text-decoration: none;
+      text-transform: capitalize;
+      display: inline-block;
+      color: black;
+      margin-top: 5px;
+    }
+    .all-mark {
+      position: relative;
+
+      .mark_title {
+        text-transform: capitalize;
+        font-weight: bold;
+        margin: 15px 0 7px 0;
+      }
+      .line-left {
+        position: absolute;
+        left: -2px;
+        top: 36px;
+        background-color: #ddd;
+        min-height: 177px;
+        width: 2px;
+      }
+      .all-checkboxes {
+        padding-left: 8px;
+      }
+      .input_custum {
+        @extend .input_custum;
+      }
+    }
+  }
+  .big_box {
+    padding: 10px;
+    .top_line {
+      position: relative;
+      left: 0px;
+      .input_custum {
+        @extend .input_custum;
+        width: 200px;
+      }
+      .sort_text {
+        text-transform: capitalize;
+        color: #777;
+        font-size: 1.1em;
+      }
+    }
+    .top_line_title {
+      font-size: 1.2em;
+      font-weight: bold;
+      position: relative;
+      top: 10px;
+    }
+  }
+  .row_cars {
+    .comune_pro {
+      border: 1px solid #ddd;
+      background-color: #fff;
+      img {
+        padding: 0;
+      }
+      .name_car {
+        font-size: 1.2em;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+      .info {
+        color: #777;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+      .price {
+        color: #3d48ff;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+    .margin_l_r {
+      grid-gap: 10px;
+    }
+  }
+}
