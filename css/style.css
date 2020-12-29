@@ -117,13 +117,13 @@ body .row_cars .comune_pro {
 }
 
 body .row_cars .comune_pro:before {
-  content: "monther";
+  content: "";
   position: absolute;
   right: -22px;
   top: 26px;
   width: 166px;
   height: 35px;
-  background-color: #3d48ff;
+  background-color: transparent;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
