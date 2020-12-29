@@ -1,99 +1,148 @@
 // Main Rules
 .input_custum {
-  padding: 5px;
-  width: 100%;
+    padding: 5px;
+    width: 100%;
+}
+.col-12.hide {
+    display: none;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+        both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.col-12.show {
+    display: block;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+        both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }
 
 body {
-  background-color: #f7f9fb;
-  height: 3000px;
+    background-color: #f7f9fb;
+    height: 3000px;
 
-  .slide {
-    border: 1px solid red;
-    padding: 10px;
-    .title {
-      font-weight: bold;
-      font-size: 1.1em;
-      margin-left: 6px;
-    }
-    .link {
-      text-decoration: none;
-      text-transform: capitalize;
-      display: inline-block;
-      color: black;
-      margin-top: 5px;
-    }
-    .all-mark {
-      position: relative;
+    .slide {
+        background-color: #fff;
+        padding: 10px;
+        .title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-left: 6px;
+        }
+        .link {
+            text-decoration: none;
+            text-transform: capitalize;
+            display: inline-block;
+            color: black;
+            margin-top: 5px;
+        }
+        .all-mark {
+            position: relative;
 
-      .mark_title {
-        text-transform: capitalize;
-        font-weight: bold;
-        margin: 15px 0 7px 0;
-      }
-      .line-left {
-        position: absolute;
-        left: -2px;
-        top: 36px;
-        background-color: #ddd;
-        min-height: 177px;
-        width: 2px;
-      }
-      .all-checkboxes {
-        padding-left: 8px;
-      }
-      .input_custum {
-        @extend .input_custum;
-      }
+            .mark_title {
+                text-transform: capitalize;
+                font-weight: bold;
+                margin: 15px 0 7px 0;
+            }
+            .line-left {
+                position: absolute;
+                left: -2px;
+                top: 36px;
+                background-color: #ddd;
+                min-height: 177px;
+                width: 2px;
+            }
+            .all-checkboxes {
+                padding-left: 8px;
+            }
+            .input_custum {
+                @extend .input_custum;
+            }
+        }
     }
-  }
-  .big_box {
-    padding: 10px;
-    .top_line {
-      position: relative;
-      left: 0px;
-      .input_custum {
-        @extend .input_custum;
-        width: 200px;
-      }
-      .sort_text {
-        text-transform: capitalize;
-        color: #777;
-        font-size: 1.1em;
-      }
+    .big_box {
+        padding: 10px;
+        .top_line {
+            position: relative;
+            left: 0px;
+            .input_custum {
+                @extend .input_custum;
+                width: 200px;
+            }
+            .sort_text {
+                text-transform: capitalize;
+                color: #777;
+                font-size: 1.1em;
+            }
+        }
+        .top_line_title {
+            font-size: 1.2em;
+            font-weight: bold;
+            position: relative;
+            top: 10px;
+        }
     }
-    .top_line_title {
-      font-size: 1.2em;
-      font-weight: bold;
-      position: relative;
-      top: 10px;
+    .row_cars {
+        .comune_pro {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            position: relative;
+            &:before {
+                content: "monther";
+                position: absolute;
+                right: -22px;
+                top: 26px;
+                width: 166px;
+                height: 35px;
+                background-color: #3d48ff;
+                transform: rotate(45deg);
+            }
+            img {
+                padding: 0;
+            }
+            .name_car {
+                font-size: 1.2em;
+                margin: 10px 0;
+                font-weight: bold;
+            }
+            .info {
+                color: #777;
+                font-weight: bold;
+                font-size: 0.8em;
+            }
+            .price_old {
+                text-decoration: line-through;
+                color: #777;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            .price_new {
+                color: #3d48ff;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+        }
+        .margin_l_r {
+            grid-gap: 10px;
+        }
     }
-  }
-  .row_cars {
-    .comune_pro {
-      border: 1px solid #ddd;
-      background-color: #fff;
-      img {
-        padding: 0;
-      }
-      .name_car {
-        font-size: 1.2em;
-        margin: 10px 0;
-        font-weight: bold;
-      }
-      .info {
-        color: #777;
-        font-weight: bold;
-        font-size: 0.9em;
-      }
-      .price {
-        color: #3d48ff;
-        font-size: 1.2em;
-        font-weight: bold;
-      }
-    }
-    .margin_l_r {
-      grid-gap: 10px;
-    }
-  }
 }

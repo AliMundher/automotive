@@ -3,13 +3,47 @@
   width: 100%;
 }
 
+.col-12.hide {
+  display: none;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.col-12.show {
+  display: block;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 body {
   background-color: #f7f9fb;
   height: 3000px;
 }
 
 body .slide {
-  border: 1px solid red;
+  background-color: #fff;
   padding: 10px;
 }
 
@@ -79,6 +113,19 @@ body .big_box .top_line_title {
 body .row_cars .comune_pro {
   border: 1px solid #ddd;
   background-color: #fff;
+  position: relative;
+}
+
+body .row_cars .comune_pro:before {
+  content: "monther";
+  position: absolute;
+  right: -22px;
+  top: 26px;
+  width: 166px;
+  height: 35px;
+  background-color: #3d48ff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 body .row_cars .comune_pro img {
@@ -94,12 +141,19 @@ body .row_cars .comune_pro .name_car {
 body .row_cars .comune_pro .info {
   color: #777;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
-body .row_cars .comune_pro .price {
+body .row_cars .comune_pro .price_old {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+body .row_cars .comune_pro .price_new {
   color: #3d48ff;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
 }
 

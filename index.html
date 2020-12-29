@@ -26,27 +26,27 @@
                         <div class="line-left"></div>
                         <!-- Start Checkbox -->
                         <div class="all-checkboxes">
-                            <input type="checkbox" id="audi" name="car" value="Audi">
+                            <input type="checkbox" id="audi" data-car="audi" name="car" value="Audi">
                             <label for="audi" class="text-capitalize">audi</label>
                             <span class="float-right">209</span>
                             <br>
-                            <input type="checkbox" id="volkswagen" name="car" value="Audi">
+                            <input type="checkbox" id="volkswagen" data-car="volkswagen" name="car" value="Audi">
                             <label for="volkswagen" class="text-capitalize">volkswagen</label>
                             <span class="float-right">89</span>
                             <br>
-                            <input type="checkbox" id="skoda" name="car" value="Audi">
+                            <input type="checkbox" id="skoda" data-car="skoda" name="car" value="Audi">
                             <label for="skoda" class="text-capitalize">skoda</label>
                             <span class="float-right">42</span>
                             <br>
-                            <input type="checkbox" id="volvo" name="car" value="Audi">
+                            <input type="checkbox" id="volvo" data-car="volvo" name="car" value="Audi">
                             <label for="volvo" class="text-capitalize">volvo</label>
                             <span class="float-right">41</span>
                             <br>
-                            <input type="checkbox" id="renault" name="car" value="Audi">
+                            <input type="checkbox" id="renault" data-car="renault" name="car" value="Audi">
                             <label for="renault" class="text-capitalize">renault</label>
                             <span class="float-right">24</span>
                             <br>
-                            <input type="checkbox" id="porch" name="car" value="Audi">
+                            <input type="checkbox" id="porch" data-car="porch" name="car" value="Audi">
                             <label for="porch" class="text-capitalize">porch</label>
                             <span class="float-right">15</span>
                             <br>
@@ -118,7 +118,6 @@
                 </div>
             </div>
             <!-- End Slide -->
-
             <!-- Start Big Box -->
             <div class="col-6 col-md-9 text-right">
                 <div class="big_box">
@@ -146,8 +145,8 @@
                 <!-- Start Rows of Cars -->
                 <div class="row_cars">
                     <!-- First Row -->
-                    <div class="row text-left">
-                        <div class="col-12 col-md-4 comune_pro">
+                    <div class="row text-left cars_row">
+                        <div class="col-12 col-md-4 comune_pro audi" data-car="audi">
                             <img src="./imgs/c1.jpg" alt="" class="img-fluid">
                             <h3 class="text-capitalize name_car">audi a1 citycarver s tronic</h3>
                             <div class="info">
@@ -156,9 +155,9 @@
                                 <span class="text-capitalize">benzine</span>
                             </div>
                             <hr>
-                            <h3 class="price ">$59.000</h3>
+                            <h3 class="price_new">$59.000</h3>
                         </div>
-                        <div class="col-12 col-md-4 margin_l_r comune_pro">
+                        <div class="col-12 col-md-4 margin_l_r comune_pro volkswagen" data-car="audi">
                             <img src="./imgs/c3.jpg" alt="" class="img-fluid">
                             <h3 class="text-capitalize name_car">audi a3 citycarver s tronic</h3>
                             <div class="info">
@@ -167,9 +166,9 @@
                                 <span class="text-capitalize">benzine</span>
                             </div>
                             <hr>
-                            <h3 class="price ">$59.000</h3>
+                            <h3 class="price_new">$55.000</h3>
                         </div>
-                        <div class="col-12 col-md-4 comune_pro">
+                        <div class="col-12 col-md-4 comune_pro skoda" data-car="volkswagen">
                             <img src="./imgs/c4.jpg" alt="" class="img-fluid">
                             <h3 class="text-capitalize name_car">audi a1 citycarver s tronic</h3>
                             <div class="info">
@@ -178,7 +177,8 @@
                                 <span class="text-capitalize">benzine</span>
                             </div>
                             <hr>
-                            <h3 class="price ">$59.000</h3>
+                            <span class="price_old mr-4">$21.000</span>
+                            <span class="price_new">$19.000</span>
                         </div>
                     </div>
                     <!-- Second Row -->
@@ -192,7 +192,7 @@
                                 <span class="text-capitalize">benzine</span>
                             </div>
                             <hr>
-                            <h3 class="price ">$59.000</h3>
+                            <h3 class="price_new">$59.000</h3>
                         </div>
                         <div class="col-12 col-md-4 margin_l_r comune_pro">
                             <img src="./imgs/c6.jpg" alt="" class="img-fluid">
@@ -203,7 +203,7 @@
                                 <span class="text-capitalize">benzine</span>
                             </div>
                             <hr>
-                            <h3 class="price ">$59.000</h3>
+                            <h3 class="price_new">$59.000</h3>
                         </div>
                         <div class="col-12 col-md-4 comune_pro">
                             <img src="./imgs/c7.jpg" alt="" class="img-fluid">
@@ -214,7 +214,7 @@
                                 <span class="text-capitalize">benzine</span>
                             </div>
                             <hr>
-                            <h3 class="price ">$59.000</h3>
+                            <h3 class="price_new">$59.000</h3>
                         </div>
                     </div>
                 </div>
@@ -229,7 +229,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
