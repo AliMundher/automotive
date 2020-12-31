@@ -3,6 +3,8 @@ $(function () {
     // Get All Mark Cars
     let all_checkboxes = document.querySelectorAll('.all-checkboxes input');
     let all_col = document.querySelectorAll('.cars_row div');
+    let y = document.getElementById('audi');
+    console.log(y.value)
 
     all_checkboxes.forEach((i) => {
         i.addEventListener('click', () => {
@@ -20,4 +22,6 @@ $(function () {
             });
         });
     });
+
+
 });

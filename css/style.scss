@@ -35,10 +35,20 @@
         transform: scale(1);
     }
 }
+.pro_price_new {
+    color: #3d48ff;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.pro_price_old {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 1.1em;
+    font-weight: bold;
+}
 
 body {
     background-color: #f7f9fb;
-    height: 3000px;
 
     .slide {
         background-color: #fff;
@@ -106,6 +116,7 @@ body {
             border: 1px solid #ddd;
             background-color: #fff;
             position: relative;
+            padding-bottom: 13px;
             &:before {
                 content: "";
                 position: absolute;
@@ -136,13 +147,157 @@ body {
                 font-weight: bold;
             }
             .price_new {
-                color: #3d48ff;
-                font-size: 1.1em;
-                font-weight: bold;
+                @extend .pro_price_new;
+            }
+            .details {
+                text-decoration: none;
             }
         }
         .margin_l_r {
             grid-gap: 10px;
+        }
+    }
+
+    // Style Of Details Page
+    .details_row {
+        margin-top: 5%;
+        .slider_left {
+            .slider_img_box {
+            }
+            .small_img {
+                display: flex;
+                @media (min-width: 767px) {
+                    width: 134px;
+                }
+                img {
+                    flex: 1;
+                    border: 2px solid #f50;
+                    cursor: pointer;
+                    @media (max-width: 767px) {
+                        width: 50px;
+                    }
+                    @media (max-width: 991px) {
+                        width: 83px;
+                    }
+                    @media (max-width: 1200px) {
+                        width: 115px;
+                        display: inline-block;
+                    }
+                }
+            }
+            .specificaties {
+                padding-bottom: 20px;
+                background-color: white;
+                border: 3px solid white;
+                h2 {
+                    font-size: 1.3em;
+                    font-weight: bold;
+                }
+                .exterieur {
+                    margin-right: 30%;
+                    color: blue;
+                    font-weight: bold;
+                }
+                .interieur {
+                    color: blue;
+                    font-weight: bold;
+                }
+            }
+        }
+        .side_info {
+            background-color: #fff;
+            padding: 12px;
+            min-height: 400px;
+            .name_car {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            .price_new {
+                @extend .pro_price_new;
+            }
+            .price_old {
+                @extend .pro_price_old;
+            }
+            .name {
+                text-transform: capitalize;
+                color: #777;
+                font-weight: bold;
+            }
+            .va {
+                font-size: 0.9em;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+            .all_spice {
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .content {
+                display: none;
+            }
+            .btn_custum {
+                width: 80%;
+                border: none;
+                padding: 12px;
+                margin-top: 5%;
+                text-align: center;
+                text-transform: capitalize;
+                margin-left: 31px;
+                background-color: #3d48ffe0;
+                color: #fff;
+            }
+        }
+        .contact_info {
+            padding: 20px;
+            min-height: 150px;
+            margin-top: 5%;
+            background-color: #fff;
+            .title_contact {
+                font-size: 1.6em;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+            .name_city {
+                text-transform: capitalize;
+                font-weight: bold;
+                color: #777;
+            }
+            .name_num {
+                font-weight: bold;
+            }
+            .geopend {
+                position: relative;
+                text-transform: capitalize;
+                color: #06c64f;
+                font-weight: bold;
+                display: inline-block;
+                &:before {
+                    content: "";
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    background-color: #06c64f;
+                    position: absolute;
+                    top: 9px;
+                    left: -16px;
+                }
+            }
+            .line {
+                display: inline-block;
+                width: 20px;
+                height: 2px;
+                background-color: #777;
+                position: relative;
+                top: -4px;
+                left: -4px;
+            }
+            .sluit {
+                text-transform: capitalize;
+                color: #777;
+                font-weight: bold;
+                font-size: 0.9em;
+            }
         }
     }
 }

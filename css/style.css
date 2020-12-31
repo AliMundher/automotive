@@ -37,9 +37,21 @@
   }
 }
 
+.pro_price_new, body .row_cars .comune_pro .price_new, body .details_row .side_info .price_new {
+  color: #3d48ff;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.pro_price_old, body .details_row .side_info .price_old {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
 body {
   background-color: #f7f9fb;
-  height: 3000px;
 }
 
 body .slide {
@@ -114,6 +126,7 @@ body .row_cars .comune_pro {
   border: 1px solid #ddd;
   background-color: #fff;
   position: relative;
+  padding-bottom: 13px;
 }
 
 body .row_cars .comune_pro:before {
@@ -151,13 +164,180 @@ body .row_cars .comune_pro .price_old {
   font-weight: bold;
 }
 
-body .row_cars .comune_pro .price_new {
-  color: #3d48ff;
-  font-size: 1.1em;
-  font-weight: bold;
+body .row_cars .comune_pro .details {
+  text-decoration: none;
 }
 
 body .row_cars .margin_l_r {
   grid-gap: 10px;
+}
+
+body .details_row {
+  margin-top: 5%;
+}
+
+body .details_row .slider_left .small_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 767px) {
+  body .details_row .slider_left .small_img {
+    width: 134px;
+  }
+}
+
+body .details_row .slider_left .small_img img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 2px solid #f50;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  body .details_row .slider_left .small_img img {
+    width: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  body .details_row .slider_left .small_img img {
+    width: 83px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body .details_row .slider_left .small_img img {
+    width: 115px;
+    display: inline-block;
+  }
+}
+
+body .details_row .slider_left .specificaties {
+  padding-bottom: 20px;
+  background-color: white;
+  border: 3px solid white;
+}
+
+body .details_row .slider_left .specificaties h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+body .details_row .slider_left .specificaties .exterieur {
+  margin-right: 30%;
+  color: blue;
+  font-weight: bold;
+}
+
+body .details_row .slider_left .specificaties .interieur {
+  color: blue;
+  font-weight: bold;
+}
+
+body .details_row .side_info {
+  background-color: #fff;
+  padding: 12px;
+  min-height: 400px;
+}
+
+body .details_row .side_info .name_car {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+body .details_row .side_info .name {
+  text-transform: capitalize;
+  color: #777;
+  font-weight: bold;
+}
+
+body .details_row .side_info .va {
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+body .details_row .side_info .all_spice {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body .details_row .side_info .content {
+  display: none;
+}
+
+body .details_row .side_info .btn_custum {
+  width: 80%;
+  border: none;
+  padding: 12px;
+  margin-top: 5%;
+  text-align: center;
+  text-transform: capitalize;
+  margin-left: 31px;
+  background-color: #3d48ffe0;
+  color: #fff;
+}
+
+body .details_row .contact_info {
+  padding: 20px;
+  min-height: 150px;
+  margin-top: 5%;
+  background-color: #fff;
+}
+
+body .details_row .contact_info .title_contact {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+body .details_row .contact_info .name_city {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #777;
+}
+
+body .details_row .contact_info .name_num {
+  font-weight: bold;
+}
+
+body .details_row .contact_info .geopend {
+  position: relative;
+  text-transform: capitalize;
+  color: #06c64f;
+  font-weight: bold;
+  display: inline-block;
+}
+
+body .details_row .contact_info .geopend:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #06c64f;
+  position: absolute;
+  top: 9px;
+  left: -16px;
+}
+
+body .details_row .contact_info .line {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: #777;
+  position: relative;
+  top: -4px;
+  left: -4px;
+}
+
+body .details_row .contact_info .sluit {
+  text-transform: capitalize;
+  color: #777;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 /*# sourceMappingURL=style.css.map */
