@@ -1,3 +1,3 @@
 # automotive
 
-[linck](https://alimundher.github.io/automotive/)
+[Demo](https://alimundher.github.io/automotive/)
